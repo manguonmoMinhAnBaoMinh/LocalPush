@@ -1,0 +1,1 @@
+<h1 style="text-align: center; background-color: indigo; height: auto; width: 100%; margin-left: 0.8rem;">Chi tiết loại sách</h1>
