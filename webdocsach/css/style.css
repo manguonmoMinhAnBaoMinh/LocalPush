@@ -1,0 +1,169 @@
+/* style="font-family:Verdana;" */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  background-color: cornsilk;
+  font-family: Arial, Helvetica, sans-serif;
+  }
+.clear{
+  clear: both;
+  /* border: 1px solid #000; */
+}
+.myNavbar{
+width: 100%;
+height: auto;
+padding-bottom:2.4rem;
+padding-left: 5.5rem;
+background-color:#016232;
+}
+.myNavbar-brand a {
+  text-decoration: none;
+
+}
+.myNavbar-brand i{
+  font-size: 2rem;
+  color: black;
+  background-color:#016232;
+}
+.myNavbar-brand span{
+  font-size: 1.5rem;
+  font-family: "Lobster", cursive;
+  background-color:#016232;
+  color: black;
+}
+.myNavbar-brand,
+.myNavbar-menu {
+  float: left;
+  background-color:#016232;
+}
+.myNavbar-menu{
+  margin-top: 0.6rem;
+}
+.myNavbar-menu ul{
+  list-style: none;
+}
+.myNavbar-menu ul li{
+  float: left;
+  padding-left: 2rem;
+  background-color:#016232;
+}
+.myNavbar-menu ul li a:hover{
+ background-color:cornsilk;
+ padding-top: 0.6rem;
+ padding-bottom: 0.6rem;
+ padding-left: 1rem;
+ padding-right: 1rem;
+}
+.myNavbar-menu ul li a{
+  background-color:#016232;
+ }
+.myNavbar-menu ul li a{
+text-decoration: none;
+font-weight: bold;
+color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .menu {
+    float:left;
+    width:20%;
+    text-align:center;
+    margin-top: 0.5rem;
+  }
+  .menu-chude{
+    background-color: #016232;
+    padding: 0.2rem;
+ font-weight: bold;   
+
+  }
+  .menu a {
+    background-color:cornsilk;;
+    padding: 0.2rem;
+    text-decoration: none;
+    display:block;
+    width:100%;
+    color:black;
+    border: 1.5px solid black;
+    margin-top: 0.2rem;
+    font-weight: bold;
+  }
+  .menu a:hover {
+    background-color: white;
+  }
+  .main {
+    float:left;
+    width:80%;
+    padding-right: 1.5rem;
+    
+    margin-top: 0.5rem;
+  }
+  .main-nd{
+    width: 100%;
+    padding-left:2rem;
+  }
+
+  .main-nds ul li{
+    list-style: none;
+    float: left;
+    margin-left: 3rem;
+    margin-top: 1rem;
+  }
+  .main-nds a img{
+    
+    height: 9rem;
+    width: 6rem;
+    border: 1px solid black;
+    margin-left: 1rem;
+  }
+  .main-nds a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-size: 1.2rem;
+    
+  }
+ 
+
+
+
+
+
+
+
+
+  .right {
+    background-color:#e5e5e5;
+    float:left;
+    width:20%;
+    padding:15px;
+    margin-top:7px;
+    text-align:center;
+    border: 1px solid black;
+  }
+  
+  @media only screen and (max-width:620px) {
+    /* For mobile phones: */
+    .menu, .main, .right,.main-nd{
+      width:100%;
+    }
+  }
+  

@@ -1,53 +1,27 @@
-
-    <div class="main-nd">
-        <div class="main-nds">
-            <ul>
-                <li><a href="index.php?xem=chitietsach&id=1"><img src="imgs/demo.jpg" />
-                        <p>Tư tưởng HCM</p>
+<?php
+$conn = mysqli_connect("localhost", "root", "", "webdocsach") or die("Error connect!");
+mysqli_query($conn,"SET NAMES 'utf8'");
+$query = "select  * from sach";
+$qr = mysqli_query($conn, $query) or die("Error query!");
+?>
+<h1 style="text-align: center; background-color: indigo; height: auto; width: 100%; margin-left: 0.8rem;">Tất cả sách</h1>
+<div class="main-nd">
+    <div class="main-nds">
+    <?php
+            $i = 1;
+            while ($dong = mysqli_fetch_array($qr)) {
+                $name =$dong['tensach'];
+                $name = (string)$name;
+                ?>
+        <ul>
+                <li><a href="index.php?xem=chitietsach&id=<?php echo $dong['id_sach'] ?>"><img src="../admincp/module/quanlysach/upload/<?php echo $dong['hinhanh'] ?>" />
+                <p style="   width: 150px; overflow: hidden;white-space: nowrap; text-overflow: ellipsis;"><?php echo $name;?></p>
                     </a></li>
-                <li><a href="#"><img src="imgs/demo.jpg" />
-                        <p>Tư tưởng HCM</p>
-                    </a></li>
-                <li><a href="#"><img src="imgs/demo.jpg" />
-                        <p>Tư tưởng HCM</p>
-                    </a></li>
-                <li><a href="#"><img src="imgs/demo.jpg" />
-                        <p>Tư tưởng HCM</p>
-                    </a></li>
-                <li><a href="#"><img src="imgs/demo.jpg" />
-                        <p>Tư tưởng HCM</p>
-                    </a></li>
-                <li><a href="#"><img src="imgs/demo.jpg" />
-                        <p>Tư tưởng HCM</p>
-                    </a></li>
-                <li><a href="#"><img src="imgs/demo.jpg" />
-                        <p>Tư tưởng HCM</p>
-                    </a></li>
-                <li><a href="#"><img src="imgs/demo.jpg" />
-                        <p>Tư tưởng HCM</p>
-                    </a></li>
-                <li><a href="#"><img src="imgs/demo.jpg" />
-                        <p>Tư tưởng HCM</p>
-                    </a></li>
-                <li><a href="#"><img src="imgs/demo.jpg" />
-                        <p>Tư tưởng HCM</p>
-                    </a></li>
-                <li><a href="#"><img src="imgs/demo.jpg" />
-                        <p>Tư tưởng HCM</p>
-                    </a></li>
-                <li><a href="#"><img src="imgs/demo.jpg" />
-                        <p>Tư tưởng HCM</p>
-                    </a></li>
-                <li><a href="#"><img src="imgs/demo.jpg" />
-                        <p>Tư tưởng HCM</p>
-                    </a></li>
-                <li><a href="#"><img src="imgs/demo.jpg" />
-                        <p>Tư tưởng HCM</p>
-                    </a></li>
-                <li><a href="#"><img src="imgs/demo.jpg" />
-                        <p>Tư tưởng HCM</p>
-                    </a></li>
-            </ul>
-        </div>
-
+        </ul>
+    <?php
+        $i++;
+    }
+    ?>
     </div>
+
+</div>

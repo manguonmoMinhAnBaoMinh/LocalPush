@@ -1,20 +1,21 @@
+<?php
+$conn = mysqli_connect("localhost", "root", "", "webdocsach") or die("Error connect!");
+mysqli_query($conn,"SET NAMES 'utf8'");
+$query = "select * from theloai";
+$qr = mysqli_query($conn, $query) or die("Error query!");
+?>
 
-    <p class="menu-chude">Thể loại</p>
-    <a href="index.php?xem=chitietloaisach&id=1">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-    <a href="#">Link 4</a>
-    <a href="#">Link 4</a>
-    <a href="#">Link 4</a>
-    <a href="#">Link 4</a>
-    <a href="#">Link 4</a>
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-    <a href="#">Link 4</a>
-    <a href="#">Link 4</a>
-    <a href="#">Link 4</a>
-    <a href="#">Link 4</a>
-    <a href="#">Link 4</a>
-    <a href="#">Link 4</a>
 
+<p class="menu-chude">Thể loại</p>
+
+<?php
+$i = 1;
+while ($dong = mysqli_fetch_array($qr)) {
+    $name = $dong['tentheloai'];
+    $name = (string) $name;
+    ?>
+    <a href="index.php?xem=theloai&id=<?php echo $dong['id_loai']?>"><?php echo $name; ?></a>
+<?php
+    $i++;
+}
+?>

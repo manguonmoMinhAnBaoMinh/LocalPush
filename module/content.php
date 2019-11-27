@@ -16,14 +16,22 @@
       else{
         $tam='';
       }
-      if($tam=='chitietloaisach'){
+      if($tam=='theloai'){
         include('module/right/chitietloaisach.php');
       }
       elseif($tam=='chitietsach'){
         include('module/right/chitietsach.php');
       }
-      else{include('module/right/tatcasach.php');}
-        
+      elseif($tam=='tatcasach'){
+        include('module/right/tatcasach.php');
+      }
+      elseif($tam=='tacgia'){
+        include('module/right/tacgia.php');
+      }
+      else{
+        include('module/right/gt.php');
+      }
+     
       
     ?>
   </div>

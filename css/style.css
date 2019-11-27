@@ -1,8 +1,9 @@
 /* style="font-family:Verdana;" */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    background-color: cornsilk;
+  box-sizing: border-box;
+  margin: 0;
+  background-color: cornsilk;
+  font-family: Arial, Helvetica, sans-serif;
   }
 .clear{
   clear: both;
@@ -119,12 +120,7 @@ color: black;
     width: 100%;
     padding-left:2rem;
   }
-  .main-nds{
-    
-  }
-  .main-nds ul{
 
-  }
   .main-nds ul li{
     list-style: none;
     float: left;
@@ -145,11 +141,7 @@ color: black;
     font-size: 1.2rem;
     
   }
-  .main-nds ul li a p{
-    
-  }
-
-
+ 
 
 
 
